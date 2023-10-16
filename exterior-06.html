@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DESPACHOS PF</title>
+
+
+        <style>
+
+            body{
+                
+            min-width: 650px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f7f8fa;
+                
+            }
+
+            header {
+            background-color: #006f78;
+            color: white;
+            padding: 10px;
+            margin-bottom: 0px;
+            text-align: center;
+            }
+
+            h4 {
+            background-color: #328f97;
+            color: white;
+            padding: 10px;
+            margin: 1px 0px 1px 0px;
+            text-align: left;
+            }
+
+            footer {
+            background-color: #006f78;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            }
+
+            .button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #44546a	;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            }
+
+            .button:hover {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #44546ac2	;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            }
+
+            ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            }
+
+            .lateral ul {
+            /*background: #0f1863; */   
+            }
+
+            .lateral ul li {
+            background: #328f97;
+            /* float: left; */
+            }
+
+            li {
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #menu-esquerda {
+            float: left;
+            width: 20%;
+            }
+
+            #menu-direita {
+                float: left;
+                width: 20%;
+                
+            }
+            
+            .despacho {
+            float: left;
+            /* background: #b3b7be; */
+            width: 58%;
+            margin: 0px 5px;
+            }
+                        
+            .lateral ul a {
+            font-size: 0.9em;
+            display: block;
+            padding: 0.5em 1.5em;
+            text-decoration: none;
+            color: azure;
+            }
+
+            .lateral ul a:hover {
+            background-color: #00474d94;
+            }
+                    
+            textarea {
+                margin: 10px 20px;
+                width: 94%;
+                max-width: 94%;
+            }
+
+            #container-button{
+                text-align: center;
+                margin: 10px;
+            }
+
+            button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+      
+            }
+
+            #atualizar {
+            background-color: #0074D9;
+            font-weight: bold;
+            width: 100px;
+            }
+
+            #copiar {
+            background-color: #30a030;
+            font-weight: bold;
+            width: 100px;
+            }
+
+            #abas-atividades {
+                text-align: center;
+                margin: 5px 0px;
+            }
+            
+
+            .clear {
+            clear: both;
+            }
+
+            legend {
+            font-size: larger;
+            }
+
+            fieldset {
+            }
+           
+
+            .exterior-01 a#exterior-01,
+            .exterior-02 a#exterior-02,
+            .exterior-03 a#exterior-03,
+            .exterior-04 a#exterior-04,
+            .exterior-05 a#exterior-05,
+            .exterior-06 a#exterior-06,
+            .exterior-07 a#exterior-07
+
+            /*
+            .index a#index,
+            .rrts-02 a#rrts-02,
+            .rrts-03 a#rrts-03,
+            .rrts-04 a#rrts-04,
+            .rrts-05 a#rrts-05,
+            .rrts-06 a#rrts-06,
+            .rrts-07 a#rrts-07,
+
+            .rrts-08 a#rrts-08,
+            .rrts-09 a#rrts-09,
+            .rrts-10 a#rrts-10,
+            .rrts-11 a#rrts-11,
+            .rrts-12 a#rrts-12,
+            .rrts-13 a#rrts-13,
+            .rrts-14 a#rrts-14,
+            .rrts-15 a#rrts-15,
+            .rrts-16 a#rrts-16,
+            .rrts-17 a#rrts-17
+
+            .derivado-01 a#derivado-01,
+            .derivado-02 a#derivado-02,
+            .derivado-03 a#derivado-03,
+            .derivado-04 a#derivado-04
+
+            .cat-01 a#cat-01,
+            .cat-02 a#cat-02,
+            .cat-03 a#cat-03,
+            .cat-04 a#cat-04
+
+            .rda-01 a#rda-01,
+            .rda-02 a#rda-02,
+            .rda-03 a#rda-03,
+            .rda-04 a#rda-04
+
+            .status-01 a#status-01,
+            .status-02 a#status-02,
+            .status-03 a#status-03,
+            .status-04 a#status-04
+
+            .interrupcao-01 a#interrupcao-01,
+            .interrupcao-02 a#interrupcao-02,
+            .interrupcao-03 a#interrupcao-03,
+            .interrupcao-04 a#interrupcao-04
+
+            .reativacao-01 a#reativacao-01,
+            .reativacao-02 a#reativacao-02,
+            .reativacao-03 a#reativacao-03,
+            .reativacao-04 a#reativacao-04
+
+            .protocolos-01 a#protocolos-01,
+            .protocolos-02 a#protocolos-02,
+            .protocolos-03 a#protocolos-03,
+            .protocolos-04 a#protocolos-04
+
+            .email-01 a#email-01,
+            .email-02 a#email-02,
+            .email-03 a#email-03,
+            .email-04 a#email-04
+            */
+            
+
+
+            {
+            color: white;
+            background: #00464d;
+            cursor: text;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 8px 4px;
+
+            }
+
+            a:hover {
+                
+                
+                background-color: #00474d94;
+
+            }
+     
+        </style>
+
+    </head>
+   
+    <body >
+
+        
+        <header>
+            <h1>Despachos - Pessoa Física</h1>
+        </header>
+    
+        <div id="menu">
+             <h4>
+                <ul>
+                    <li>
+                        <a href="https://acesso.caubr.gov.br/home" target="_blank">SICCAU</a>
+                        <span>|</span>
+                        <a href="https://conselhoarquitetura.sharepoint.com/:x:/r/sites/Tcnica-PF/_layouts/15/Doc.aspx?sourcedoc=%7BE9C33855-F6C5-4558-A324-D925A0E63F93%7D&file=Despachos.xlsx&action=default&mobileredirect=true" target="_blank">Despachos</a>
+                        <span>|</span>
+                        <a href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções</a>
+                        <span>|</span>
+                        <a href="https://conselhoarquitetura-my.sharepoint.com/personal/nick_silva_causp_gov_br/_layouts/15/onedrive.aspx?id=%2Fsites%2FTcnica%2DPF%2FDocumentos%20Compartilhados%2FGeneral%2FManual%20%2D%20Supervis%C3%A3o%20de%20Pessoa%20F%C3%ADsica&listurl=https%3A%2F%2Fconselhoarquitetura%2Esharepoint%2Ecom%2Fsites%2FTcnica%2DPF%2FDocumentos%20Compartilhados&remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fnick%5Fsilva%5Fcausp%5Fgov%5Fbr%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fnick%5Fsilva%5Fcausp%5Fgov%5Fbr%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fnick%5Fsilva%5Fcausp%5Fgov%5Fbr%2FDocuments%2FGeneral%22%7D%2C%22rsi%22%3A%7B%22listFullUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Esharepoint%2Ecom%2Fsites%2FTcnica%2DPF%2FDocumentos%20Compartilhados%22%2C%22rootFolder%22%3A%22%2Fsites%2FTcnica%2DPF%2FDocumentos%20Compartilhados%2FGeneral%2FManual%20%2D%20Supervis%C3%A3o%20de%20Pessoa%20F%C3%ADsica%22%2C%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Esharepoint%2Ecom%2Fsites%2FTcnica%2DPF%22%7D%7D&view=0&viewid=0ff87dd3%2Da602%2D4216%2D9534%2D93c30629cbe9" target="_blank">Manuais</a>
+                        <span>|</span>
+                        <a href="https://conselhoarquitetura-my.sharepoint.com/personal/nick_silva_causp_gov_br/_layouts/15/onedrive.aspx?remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fnick%5Fsilva%5Fcausp%5Fgov%5Fbr%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fnick%5Fsilva%5Fcausp%5Fgov%5Fbr%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fnick%5Fsilva%5Fcausp%5Fgov%5Fbr%2FDocuments%2FGeneral%22%7D%2C%22rsf%22%3A%7B%22listId%22%3A%2201c6502a%2D6854%2D40ee%2D9b3a%2Da067dd9f661b%22%2C%22siteUrl%22%3A%22https%3A%2F%2Fconselhoarquitetura%2Esharepoint%2Ecom%2Fsites%2FTcnica%2DPF%22%2C%22uniqueId%22%3A%22b8fa27ce%2D2739%2D43fc%2Db63d%2D09435c05ba5f%22%7D%7D&view=0" target="_blank">Drive</a>
+                    </li>
+        
+                </ul>
+         
+
+                
+            </h4>
+        </div>
+
+
+
+        <div id="abas-atividades">
+       
+            <button class="button"  onclick="RedirecionarRRTs()">RRTs</button>
+            <button class="button"  onclick="RedirecionarCAT()">CAT-A</button>
+            <button class="button"  onclick="RedirecionarRDA()">RDA</button>
+            <button class="button"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
+            <button class="button"  onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
+            <button class="button"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
+            <button class="button"  onclick="RedirecionarEmail()">E-MAIL</button>
+            <button class="button"  onclick="RedirecionarSICCAU()">SICCAU</button>
+            
+            
+        </div>
+        
+        
+        <hr>    
+        
+
+        <div id="menu-esquerda">
+            <div class="exterior-06">
+
+                <div class="container">
+                    <div class="lateral">
+                        <ul class="navegacao">
+
+
+                            <fieldset>
+                                <legend style="color:#44546a">
+                                    
+                                    Extemporâneo
+
+                                </legend>
+                                
+
+
+                                <li>
+                                    <a id="index" href="index.html">RRT Aprovado</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="rrts-02" href="rrts-02.html">RRT Aprovado (Retificador)</a>
+                                </li>
+
+                                
+                                <li>
+                                    <a id="rrts-03" href="rrts-03.html">RRT Aprovado - Atestado Não Aprova na CAT-A</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-04" href="rrts-04.html">1 Dado Divergênte</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-05" href="rrts-05.html">Dados Divergêntes</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-06" href="rrts-06.html">Falta Documento - Contratante PF</a>
+                                </li>
+
+                                <li>
+                                    <a id="rrts-07" href="rrts-07.html">Falta Documento - Contratante PJ</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-08" href="rrts-08.html">Faltam Documentos de Cargo e Função</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-09" href="rrts-09.html">Erro no Arquivo</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-10" href="rrts-10.html">Situação de Emergência</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-11" href="rrts-11.html">Atividade Não Contemplada</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-12" href="rrts-12.html">Mais de um Endereço</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-13" href="rrts-13.html">Atividade de Regularização</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-14" href="rrts-14.html">Outro responsável Técnico</a>
+                                </li>
+                                <li>
+                                    <a id="rrts-15" href="rrts-15.html">Múltiplo Mensal</a>
+                                </li>
+                         
+
+                             </fieldset>
+                                
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="despacho">
+
+            <div>
+            <textarea name="" id="" cols="100" rows="15">
+D XX<br> <br>
+RRT Nº XXXXXXXXXX <br><br>
+Prezado(a) profissional, há <b>divergência</b> entre o RRT e documento comprobatório anexado. <br>
+O RRT deverá ser corrigido ou, se for erro no documento, deverá anexar o documento correto:<br><br>
+- XXXXXXXXXXXXXXX<br>
+
+<br><br>
+Este protocolo será arquivado temporariamente. <br>
+Após efetuar a correção no RRT ou, para enviar o documento, encaminhe um e-mail para: <b>analisepf@causp.gov.br</b> informando o número do RRT ou do protocolo de análise.
+O documento também poderá ser anexado no sistema, devendo ser encaminhado o e-mail solicitando prosseguimento de análise. <br><br>
+A falta de encaminhamento do e-mail, em qualquer das hipóteses, <b>impedirá o prosseguimento da análise</b>. <br>  <br><br><br>
+Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br>
+
+
+Atenciosamente, <br><b>
+Supervisão de Pessoa Física – CAU/SP
+            </textarea>
+            </div>
+            
+            <div id="container-button">
+                <button id="copiar">Copiar</button>
+                <button id="atualizar">Atualizar</button>
+            </div>
+
+           
+
+        </div>
+
+        <div id="menu-direita">
+            <div class="exterior-06">
+
+                <div class="container">
+                    <div class="lateral">
+                        <ul class="navegacao">
+
+
+                            
+                            <fieldset>
+                                
+                                <legend style="color: #44546a;">
+                                    
+                                    Exterior
+
+                                </legend>
+
+
+
+                                <li>
+                                    <a id="exterior-01" href="exterior-01.html">Sem Documentos</a>
+                                </li>
+                                <li>
+                                    <a id="exterior-02" href="exterior-02.html">Emitido por Engano</a>
+                                </li>
+                                <li>
+                                    <a id="exterior-03" href="exterior-03.html">Em Duplicidade para um Aditivo</a>
+                                </li>
+
+                                       
+                                <li>
+                                    <a id="exterior-04" href="exterior-04.html">Sem Tradução</a>
+                                </li>
+                                <li>
+                                    <a id="exterior-05" href="exterior-05.html">Aprovado</a>
+                                </li>
+
+                                <li>
+                                    <a id="exterior-06" href="exterior-06.html">Sem Tradução</a>
+                                </li>
+                                <li>
+                                    <a id="exterior-07" href="exterior-07.html">Aprovado</a>
+                                </li>
+
+                            </fieldset>
+
+                            <br>
+
+                            <fieldset>
+
+                                <legend style="color: #44546a;">
+                                   
+                                    Derivado
+
+                                </legend>
+                                                                    
+
+
+
+                                <li>
+                                    <a id="derivado-01" href="derivado-01.html">Derivado - FALTA ART</a>
+                                </li>
+                                <li>
+                                    <a id="derivado-02" href="derivado-02.html">Derivado - Dados Divergentes</a>
+                                </li>
+                                <li>
+                                    <a id="derivado-03" href="derivado-03.html">Derivado Reficador</a>
+                                </li>
+                                <li>
+                                    <a id="derivado-04" href="derivado-04.html">Derivado Aprovado</a>
+                                </li>
+                                
+                        
+                            </fieldset>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <hr>
+        
+
+
+        <footer>
+            Equipe de Coordenação Técnica de Exercício Profissional - CAU/SP.
+        </footer>
+
+
+    </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const copiarBotao = document.getElementById("copiar");
+            const textarea = document.querySelector("textarea");
+    
+            copiarBotao.addEventListener("click", function() {
+                textarea.select();
+                document.execCommand("copy");
+                
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const atualizarBotao = document.getElementById("atualizar");
+        
+        atualizarBotao.addEventListener("click", function() {
+                location.reload(); // Esta linha recarrega a página
+            });
+        });
+
+        function RedirecionarRRTs() {
+            window.open('file:///E:/despachos-pf/index.html', '_self');
+        }
+
+        function RedirecionarCAT() {
+            window.open('file:///E:/DESPACHOS-pf/cat-01.html', '_self');
+        }
+
+        function RedirecionarRDA() {
+            window.open('file:///E:/DESPACHOS-pf/rda-01.html', '_self');
+        }
+        function RedirecionarStatusRRT() {
+            window.open('file:///E:/DESPACHOS-pf/status-01.html', '_self');
+        }
+        function RedirecionarInterrupcao() {
+            window.open('file:///E:/DESPACHOS-pf/interrupcao-01.html', '_self');
+        }
+        function RedirecionarProtocolos() {
+            window.open('file:///E:/DESPACHOS-pf/protocolos-01.html', '_self');
+        }
+        function RedirecionarEmail() {
+            window.open('file:///E:/DESPACHOS-pf/email-01.html', '_self');
+        }
+        function RedirecionarSICCAU() {
+            window.open('file:///E:/DESPACHOS-pf/siccau-01.html', '_self');
+        }
+        function RedirecionarDuvidas() {
+            window.open('file:///E:/DESPACHOS-pf/duvidas-01.html', '_self');
+        }
+
+
+        
+    </script>
+
+</html>
