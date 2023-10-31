@@ -165,27 +165,31 @@
             fieldset {
             }
            
+           
 
-            .index a#index,
-            .rrts-02 a#rrts-02,
-            .rrts-03 a#rrts-03,
-            .rrts-04 a#rrts-04,
-            .rrts-05 a#rrts-05,
-            .rrts-06 a#rrts-06,
-            .rrts-07 a#rrts-07,
+            .email-07 a#email-07,
+            .email-08 a#email-08,
+            .email-09 a#email-09,
+            .email-10 a#email-10,
+            .email-11 a#email-11,
+            .email-11 a#email-12
 
-            .rrts-08 a#rrts-08,
-            .rrts-09 a#rrts-09,
-            .rrts-10 a#rrts-10,
-            .rrts-11 a#rrts-11,
-            .rrts-12 a#rrts-12,
-            .rrts-13 a#rrts-13,
-            .rrts-14 a#rrts-14,
-            .rrts-15 a#rrts-15,
-            .rrts-16 a#rrts-16,
-            .rrts-17 a#rrts-17
 
             /*
+
+            .protocolos-07 a#protocolos-07,
+            .protocolos-08 a#protocolos-08,
+            .protocolos-09 a#protocolos-09,
+            .protocolos-10 a#protocolos-10,
+            .protocolos-11 a#protocolos-11,
+            .protocolos-12 a#protocolos-12,
+            .protocolos-13 a#protocolos-13,
+            .protocolos-14 a#protocolos-14,
+            .protocolos-15 a#protocolos-15
+
+
+
+           
             .exterior-01 a#exterior-01,
             .exterior-02 a#exterior-02,
             .exterior-03 a#exterior-03,
@@ -227,10 +231,7 @@
             .protocolos-03 a#protocolos-03,
             .protocolos-04 a#protocolos-04
 
-            .email-01 a#email-01,
-            .email-02 a#email-02,
-            .email-03 a#email-03,
-            .email-04 a#email-04
+
             */
             
 
@@ -240,7 +241,6 @@
             background: #00464d;
             cursor: text;
             }
-
             a {
                 text-decoration: none;
                 color: white;
@@ -286,6 +286,8 @@
                     </li>
         
                 </ul>
+        
+                </ul>
          
 
                 
@@ -304,7 +306,6 @@
             <button class="button"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
             <button class="button"  onclick="RedirecionarEmail()">E-MAIL</button>
             <button class="button"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button>
-
             <button class="button"  onclick="RedirecionarSICCAU()">SICCAU</button>
             
             
@@ -315,77 +316,61 @@
         
 
         <div id="menu-esquerda">
-            <div class="index">
+            <div class="email-01">
 
                 <div class="container">
                     <div class="lateral">
                         <ul class="navegacao">
 
-
                             <fieldset>
-                                <legend style="color:#44546a">
+                                
+                                <legend style="color: #44546a;">
                                     
-                                    Extemporâneo
+                                    Respostas de EMAIL
 
                                 </legend>
+
+
+
+                                <li>
+                                    <a id="email-01" href="email-01.html">Aprovação RRT Extemporâneo</a>
+                                </li>
+                                <li>
+                                    <a id="email-02" href="email-02.html">Aprovação RRT Exterior</a>
+                                </li>
+                                <li>
+                                    <a id="email-03" href="email-03.html">Aprovação RRT Derivado ou RRT Retificador</a>
+                                </li>
+
+                                       
+                                <li>
+                                    <a id="email-04" href="email-04.html">Aprovação CAT-A</a>
+                                </li>
+                                <li>
+                                    <a id="email-05" href="email-05.html">Cancelamento RRT</a>
+                                </li>
                                 
 
+                            </fieldset>
+                            <br>
+                            <fieldset>
 
-                                <li>
-                                    <a id="index" href="index.html">RRT Aprovado</a>
-                                </li>
-                            
-                                <li>
-                                    <a id="rrts-02" href="rrts-02.html">RRT Aprovado (Retificador)</a>
-                                </li>
+                                <legend style="color: #44546a;">
+                                   
+                                    Solicitação de GAD
 
+                                </legend>
+                                       
                                 
                                 <li>
-                                    <a id="rrts-03" href="rrts-03.html">RRT Aprovado - Atestado Não Aprova na CAT-A</a>
+                                    <a id="email-06" href="email-06.html">Solicitação de GAD por E-MAIL</a>
                                 </li>
-                                <li>
-                                    <a id="rrts-04" href="rrts-04.html">1 Dado Divergente</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-05" href="rrts-05.html">Dados Divergentes</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-06" href="rrts-06.html">Falta Documento - Contratante PF</a>
-                                </li>
-
-                                <li>
-                                    <a id="rrts-07" href="rrts-07.html">Falta Documento - Contratante PJ</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-08" href="rrts-08.html">Faltam Documentos de Cargo e Função</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-09" href="rrts-09.html">Erro no Arquivo</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-10" href="rrts-10.html">Situação de Emergência</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-11" href="rrts-11.html">Atividade Não Contemplada</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-12" href="rrts-12.html">Mais de um Endereço</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-13" href="rrts-13.html">Atividade de Regularização</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-14" href="rrts-14.html">Outro responsável Técnico</a>
-                                </li>
-                                <li>
-                                    <a id="rrts-15" href="rrts-15.html">Múltiplo Mensal</a>
-                                </li>
-                         
-
-                             </fieldset>
                                 
+                                                        
+                            </fieldset>
 
-
+                                                    
+                                
 
                         </ul>
                     </div>
@@ -434,78 +419,50 @@
         </div>
 
         <div id="menu-direita">
-            <div class="exterior-01">
+            <div class="email-12">
 
                 <div class="container">
                     <div class="lateral">
                         <ul class="navegacao">
 
 
-                            
+
                             <fieldset>
-                                
-                                <legend style="color: #44546a;">
+                                <legend style="color:#44546a">
                                     
-                                    Exterior
+                                    Respostas de EMAIL
 
-                                </legend>
-
-
-
-                                <li>
-                                    <a id="exterior-01" href="exterior-01.html">Sem Documentos</a>
-                                </li>
-                                <li>
-                                    <a id="exterior-02" href="exterior-02.html">Emitido por Engano</a>
-                                </li>
-                                <li>
-                                    <a id="exterior-03" href="exterior-03.html">Em Duplicidade para um Aditivo</a>
-                                </li>
-
-                                       
-                                <li>
-                                    <a id="exterior-04" href="exterior-04.html">Sem Tradução</a>
-                                </li>
-                                <li>
-                                    <a id="exterior-05" href="exterior-05.html">Aprovado</a>
-                                </li>
-                                <li>
-                                    <a id="exterior-06" href="exterior-06.html">Sem Tradução</a>
-                                </li>
-                                <li>
-                                    <a id="exterior-07" href="exterior-07.html">Aprovado</a>
-                                </li>
-
-                            </fieldset>
-
-                            <br>
-
-                            <fieldset>
-
-                                <legend style="color: #44546a;">
-                                   
-                                    Derivado
-
-                                </legend>
-                                                                    
-
+                                </legend>                             
 
 
                                 <li>
-                                    <a id="derivado-01" href="derivado-01.html">Derivado - FALTA ART</a>
+                                    <a id="email-07" href="email-07.html">RRT Notificado</a>
                                 </li>
+                            
                                 <li>
-                                    <a id="derivado-02" href="derivado-02.html">Derivado - Dados Divergentes</a>
-                                </li>
+                                    <a id="email-08" href="email-08.html">RDA Encaminhado à CEP-CAU/SP</a>
+                                </li>   
+
                                 <li>
-                                    <a id="derivado-03" href="derivado-03.html">Derivado Reficador</a>
-                                </li>
+                                    <a id="email-09" href="email-09.html">RDA - Falta Documento</a>
+                                </li>   
+
                                 <li>
-                                    <a id="derivado-04" href="derivado-04.html">Derivado Aprovado</a>
-                                </li>
-                                
-                        
-                            </fieldset>
+                                    <a id="email-10" href="email-10.html">Baixa de RRT</a>
+                                </li>   
+
+                                <li>
+                                    <a id="email-11" href="email-11.html">Encaminhar e-mail a Outro Setor</a>
+                                </li>    
+                                <li>
+                                    <a id="email-12" href="email-12.html"> --- Teste Imagens ---</a>
+                                </li>    
+
+                         
+
+                             </fieldset>
+
+                             
 
 
                         </ul>
@@ -577,7 +534,7 @@
             window.open('https://despachos-pf.netlify.app/siccau-01', '_self');
         }
         function RedirecionarDespachosGerais() {
-            window.open('https://despachos-pf.netlify.app/d-gerais-01', '_self');
+            window.open('https://despachos-pf.netlify.app/email-12', '_self');
         }
 
 
