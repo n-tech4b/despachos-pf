@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DESPACHOS PF</title>
 
+
         <style>
 
             body{
                 
-            min-width: 1000px;
+            min-width: 650px;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f7f8fa;
                 
@@ -113,12 +114,10 @@
             background-color: #00474d94;
             }
                     
-
-
-            resultado {
+            textarea {
                 margin: 10px 20px;
-                min-width: 80%;
-                max-width: 90%;
+                width: 94%;
+                max-width: 94%;
             }
 
             #container-button{
@@ -165,14 +164,14 @@
             fieldset {
             }
            
-           
 
             .email-07 a#email-07,
             .email-08 a#email-08,
             .email-09 a#email-09,
             .email-10 a#email-10,
             .email-11 a#email-11,
-            .email-12 a#email-12
+            .email-12 a#email-12,
+            .email-13 a#email-13
 
 
             /*
@@ -254,39 +253,6 @@
                 background-color: #00474d94;
 
             }
-
-            a {
-                text-decoration: none;
-                color: white;
-                padding: 8px 4px;
-
-            }
-
-            a:hover {
-                
-                
-                background-color: #00474d94;
-
-            }
-
-            
-
-            #link_extemp {
-                background-color: transparent;
-                text-decoration: underline;
-                color: blue;
-                padding: 0px;
-                cursor: pointer; 
-            }
-
-            #link_extemp:hover {
-                background-color: transparent;
-                color: darkblue; 
-                padding: 0px;
-            }
-
-
-
      
         </style>
 
@@ -415,31 +381,14 @@
 
         <div class="despacho">
 
+            <div>
+            <textarea style="font-family: arial; font: 11px" name="" id="" cols="100" rows="15">
+Prezado(a) profissional, bom dia / boa tarde.
 
+Verificamos que a taxa de expediente ainda não foi paga, portanto, não é possível efetuar a análise do RRT.
 
-            <!-- div para inserir texto e imagem -->
-            <div class="resultado" style="border: 1px solid #44546a; margin: 10px; padding: 5px; background-color: white; font-family: arial; font: 11px" id="resultado" contenteditable="true">
-                             
-                
-                Prezado(a) profissional, bom dia/boa tarde.
-                <br>
-                <br>
-                O RRT Extemporâneo é um RRT que foi emitido fora dos prazos legais determinados pela Resolução CAU/BR nº 184/2019.
-                <br>
-                <br>
-                Para completar o registro do RRT Extemporâneo, há duas taxas de RRT: taxa de expediente(antes da análise) e taxa de RRT(após aprovação da análise). 
-                <br>
-                <br>
-                <img src="imagens/img_extemporaneo_nova.png" alt="">
-                <br>
-                <br>
-                Segue abaixo link com mais informações sobre o RRT Extemporâneo.
-                <a id="link_extemp" href="https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_rrt_extemporaneo_r00.pdf" target="_blank">https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_rrt_extemporaneo_r00.pdf</a>
-                <br>
-                <br>
-                
-            
-            
+Após a compensação do pagamento da taxa, o RRT irá automaticamente para análise do setor.
+            </textarea>
             </div>
             
             <div id="container-button">
@@ -469,28 +418,30 @@
 
 
                                 <li>
-                                    <a id="email-07" href="email-07.html">RRT Notificado</a>
+                                    <a id="email-07" href="email-07.html">RDA Encaminhado à CEP-CAU/SP</a>
                                 </li>
                             
                                 <li>
-                                    <a id="email-08" href="email-08.html">RDA Encaminhado à CEP-CAU/SP</a>
+                                    <a id="email-08" href="email-08.html">RDA - Falta Documento</a>
                                 </li>   
 
                                 <li>
-                                    <a id="email-09" href="email-09.html">RDA - Falta Documento</a>
+                                    <a id="email-09" href="email-09.html">Baixa de RRT</a>
                                 </li>   
 
                                 <li>
-                                    <a id="email-10" href="email-10.html">Baixa de RRT</a>
+                                    <a id="email-10" href="email-10.html">RRT Notificado</a>
                                 </li>   
 
                                 <li>
                                     <a id="email-11" href="email-11.html">Encaminhar e-mail a Outro Setor</a>
                                 </li>    
                                 <li>
-                                    <a id="email-12" href="email-12.html"> --- Teste Imagens ---</a>
-                                </li>    
-
+                                    <a id="email-12" href="email-12.html">RRT Extemporâneo não Pago</a>
+                                </li>   
+                                <li>
+                                    <a id="email-13" href="email-13.html">Imagem 2ª Taxa</a>
+                                </li>     
                          
 
                              </fieldset>
@@ -518,17 +469,15 @@
     </body>
 
     <script>
-        
-        const copiarBotao = document.getElementById("copiar");
-        const divResultado = document.getElementById("resultado");
-
-        copiarBotao.addEventListener("click", function() {
-            const range = document.createRange();
-            range.selectNodeContents(divResultado);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            document.execCommand("copy");
+        document.addEventListener("DOMContentLoaded", function() {
+            const copiarBotao = document.getElementById("copiar");
+            const textarea = document.querySelector("textarea");
+    
+            copiarBotao.addEventListener("click", function() {
+                textarea.select();
+                document.execCommand("copy");
+                
+            });
         });
 
 
@@ -541,38 +490,32 @@
         });
 
         function RedirecionarRRTs() {
-            window.open('https://despachos-pf.netlify.app', '_self');
+            window.open('index.html', '_self');
         }
 
         function RedirecionarCAT() {
-            window.open('https://despachos-pf.netlify.app/cat-01', '_self');
+            window.open('cat-01.html', '_self');
         }
 
         function RedirecionarRDA() {
-            window.open('https://despachos-pf.netlify.app/rda-01', '_self');
+            window.open('rda-01.html', '_self');
         }
         function RedirecionarStatusRRT() {
-            window.open('https://despachos-pf.netlify.app/status-01', '_self');
+            window.open('status-01.html', '_self');
         }
         function RedirecionarInterrupcao() {
-            window.open('https://despachos-pf.netlify.app/interrupcao-01', '_self');
+            window.open('interrupcao-01.html', '_self');
         }
         function RedirecionarProtocolos() {
-            window.open('https://despachos-pf.netlify.app/protocolos-01', '_self');
+            window.open('protocolos-01.html', '_self');
         }
         function RedirecionarEmail() {
-            window.open('https://despachos-pf.netlify.app/email-01', '_self');
+            window.open('email-01.html', '_self');
         }
         function RedirecionarSICCAU() {
-            window.open('https://despachos-pf.netlify.app/siccau-01', '_self');
+            window.open('siccau-01.html', '_self');
         }
-        function RedirecionarDespachosGerais() {
-            window.open('https://despachos-pf.netlify.app/email-12', '_self');
-        }
-
-
-        
-
+        //function RedirecionarDespachosGerais() {window.open('https://despachos-pf.netlify.app/email-12', '_self');}
 
 
         

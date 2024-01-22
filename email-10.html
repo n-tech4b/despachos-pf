@@ -170,7 +170,8 @@
             .email-09 a#email-09,
             .email-10 a#email-10,
             .email-11 a#email-11,
-            .email-12 a#email-12
+            .email-12 a#email-12,
+            .email-13 a#email-13
 
 
             /*
@@ -380,15 +381,10 @@
         <div class="despacho">
 
             <div>
-            <textarea name="" id="" cols="100" rows="15">
+            <textarea style="font-family: arial; font: 11px" name="" id="" cols="100" rows="15">
 Prezado(a) profissional, bom dia / boa tarde.
 
-Para a baixa do RRT, é necessário informar a data em que a atividade foi concluída.
-
-Caso a data de término das atividades seja posterior à data de previsão de término das atividades do RRT XXXXXXXX(XX/XX/XX), será necessário realizar a retificação desta data no RRT.
-
-Para retificar o RRT, deverá abrir um protocolo com o assunto: PERMISSÃO DE RETIFICAÇÃO DE RRT BAIXADO, informando o número do RRT, os dados a serem retificados e o motivo (correção da data de término para baixa do RRT). 
-Dada a permissão, basta elaborar o RRT Retificador.
+Seu RRT foi analisado e foi encaminhado o seguinte despacho: 
             </textarea>
             </div>
             
@@ -418,27 +414,30 @@ Dada a permissão, basta elaborar o RRT Retificador.
                                 </legend>                             
 
                                 <li>
-                                    <a id="email-07" href="email-07.html">RRT Notificado</a>
+                                    <a id="email-07" href="email-07.html">RDA Encaminhado à CEP-CAU/SP</a>
                                 </li>
                             
                                 <li>
-                                    <a id="email-08" href="email-08.html">RDA Encaminhado à CEP-CAU/SP</a>
+                                    <a id="email-08" href="email-08.html">RDA - Falta Documento</a>
                                 </li>   
 
                                 <li>
-                                    <a id="email-09" href="email-09.html">RDA - Falta Documento</a>
+                                    <a id="email-09" href="email-09.html">Baixa de RRT</a>
                                 </li>   
 
                                 <li>
-                                    <a id="email-10" href="email-10.html">Baixa de RRT</a>
+                                    <a id="email-10" href="email-10.html">RRT Notificado</a>
                                 </li>   
 
                                 <li>
                                     <a id="email-11" href="email-11.html">Encaminhar e-mail a Outro Setor</a>
                                 </li>    
                                 <li>
-                                    <a id="email-12" href="email-12.html"> --- Teste Imagens ---</a>
+                                    <a id="email-12" href="email-12.html">RRT Extemporâneo não Pago</a>
                                 </li>   
+                                <li>
+                                    <a id="email-13" href="email-13.html">Imagem 2ª Taxa</a>
+                                </li>    
                          
 
                              </fieldset>
@@ -488,34 +487,32 @@ Dada a permissão, basta elaborar o RRT Retificador.
         });
 
         function RedirecionarRRTs() {
-            window.open('https://despachos-pf.netlify.app', '_self');
+            window.open('index.html', '_self');
         }
 
         function RedirecionarCAT() {
-            window.open('https://despachos-pf.netlify.app/cat-01', '_self');
+            window.open('cat-01.html', '_self');
         }
 
         function RedirecionarRDA() {
-            window.open('https://despachos-pf.netlify.app/rda-01', '_self');
+            window.open('rda-01.html', '_self');
         }
         function RedirecionarStatusRRT() {
-            window.open('https://despachos-pf.netlify.app/status-01', '_self');
+            window.open('status-01.html', '_self');
         }
         function RedirecionarInterrupcao() {
-            window.open('https://despachos-pf.netlify.app/interrupcao-01', '_self');
+            window.open('interrupcao-01.html', '_self');
         }
         function RedirecionarProtocolos() {
-            window.open('https://despachos-pf.netlify.app/protocolos-01', '_self');
+            window.open('protocolos-01.html', '_self');
         }
         function RedirecionarEmail() {
-            window.open('https://despachos-pf.netlify.app/email-01', '_self');
+            window.open('email-01.html', '_self');
         }
         function RedirecionarSICCAU() {
-            window.open('https://despachos-pf.netlify.app/siccau-01', '_self');
+            window.open('siccau-01.html', '_self');
         }
-        function RedirecionarDespachosGerais() {
-            window.open('https://despachos-pf.netlify.app/email-12', '_self');
-        }
+        //function RedirecionarDespachosGerais() {window.open('https://despachos-pf.netlify.app/email-12', '_self');}
 
 
         
