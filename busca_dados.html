@@ -140,17 +140,17 @@
                 <div class="col-md-12">
 
                         
-                    <div id="abas-atividades">
+                    <div class="d-flex justify-content-center" id="">
                 
-                        <button class="btn"  onclick="RedirecionarRRTs()">RRTs</button>
-                        <button class="btn"  onclick="RedirecionarCAT()">CAT-A</button>
-                        <button class="btn"  onclick="RedirecionarRDA()">RDA</button>
-                        <button class="btn"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
-                        <button class="btn"  onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
-                        <button class="btn"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
-                        <button class="btn"  onclick="RedirecionarEmail()">E-MAIL</button>
-                        <button class="btn"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button>
-                        <button class="btn"  onclick="RedirecionarSICCAU()">SICCAU</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarRRTs()">RRTs</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarCAT()">CAT-A</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarRDA()">RDA</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarEmail()">E-MAIL</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button>
+                        <button class="btn btn-secondary"  onclick="RedirecionarSICCAU()">SICCAU</button>
                         
                         
                     </div>
@@ -185,17 +185,29 @@
 
                 <div class="col-md-8 border">
                     <div class="container-fluid" >
-                        <div class="row border" >
-                            oi
+                        <div class="row border d-flex align-items-center my-3" >
+
+                            <h6 class="ml-3 m-0">Despacho:</h6>
+
+                            <label class="m-0 ml-3" for="checkbox1">01</label>
+                            <input class="m-0 ml-1" type="checkbox" name="checkbox1">
+                            <label class="m-0 ml-3" for="checkbox2">02</label>
+                            <input class="m-0 ml-1" type="checkbox" name="checkbox2">
+                            <label class="m-0 ml-3" for="checkbox2">03</label>
+                            <input class="m-0 ml-1" type="checkbox" name="checkbox2">
+                            <label class="m-0 ml-3" for="checkbox2">04</label>
+                            <input class="m-0 ml-1" type="checkbox" name="checkbox2">
+                            <label class="m-0 ml-3" for="checkbox2">05</label>
+                            <input class="m-0 ml-1" type="checkbox" name="checkbox2">
 
                         </div>
                         <div class="row" >
                             <div class="col-md-12">
                                 <div id="dataTextDisplay">
-                                    <h4 class="ml-3">Despacho:</h4>
+
                                     <!-- <textarea id="despacho" class="form-control border-dark" rows="10" style="line-height: 1;"> -->
                                     <!-- Campo de texto onde o Jodit será aplicado -->
-                                    <textarea id="editor" class="form-control border-dark" rows="10" style="line-height: 1;"></textarea>
+                                    <textarea id="despacho" class="form-control border-dark" rows="10" style="line-height: 1;"></textarea>
 
                                     <div class="mt-3 text-center">
                                         <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
@@ -247,7 +259,7 @@
     
         <!-- Inicializando o editor -->
         <script>
-            var editor = new Jodit('#editor', {
+            var despacho = new Jodit('#despacho', {
                 // Configurações do editor
                 minHeight: 300,
                 buttons: [
@@ -268,14 +280,28 @@
 
         <script>
 
+            // function loadDespacho() {
+            //     fetch('despacho.json')
+            //         .then(response => response.json())
+            //         .then(data => {
+            //             despacho.value = data.despacho; // Carrega o conteúdo no despacho Jodit
+            //         })
+            //         .catch(error => console.error('Erro ao carregar o despacho:', error));
+            // }
+
+            // Função para carregar o despacho do arquivo JSON
             function loadDespacho() {
                 fetch('despacho.json')
                     .then(response => response.json())
                     .then(data => {
-                        editor.value = data.despacho; // Carrega o conteúdo no editor Jodit
+                        document.getElementById('despacho').value = data.despacho;
                     })
                     .catch(error => console.error('Erro ao carregar o despacho:', error));
             }
+
+            // Carregar o despacho ao carregar a página
+            window.onload = loadDespacho;
+
             
         </script>
 
