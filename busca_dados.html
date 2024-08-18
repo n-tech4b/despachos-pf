@@ -262,14 +262,15 @@
 
         <script>
 
-            function loadDespacho() {
+
+            document.addEventListener('DOMContentLoaded', () => {
                 fetch('despacho.json')
                     .then(response => response.json())
                     .then(data => {
-                        despacho.value = data.despacho; // Carrega o conteúdo no despacho Jodit
+                        despacho.value = data.despacho;
                     })
                     .catch(error => console.error('Erro ao carregar o despacho:', error));
-            }
+            });
 
             // // Função para carregar o despacho do arquivo JSON
             // function loadDespacho() {
