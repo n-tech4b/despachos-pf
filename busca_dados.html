@@ -261,20 +261,28 @@
             });
         </script>
 
+        
+
 
         <script>
-            // Função para carregar o despacho do arquivo JSON
+
             function loadDespacho() {
                 fetch('despacho.json')
                     .then(response => response.json())
                     .then(data => {
+<<<<<<< HEAD
+                        editor.value = data.despacho; // Carrega o conteúdo no editor Jodit
+=======
                         document.getElementById('editor').value = data.editor;
+>>>>>>> eea6307eb3926bd64224a19359b2257c8d43dc7e
                     })
                     .catch(error => console.error('Erro ao carregar o despacho:', error));
             }
-    
+
+  
             // Carregar o despacho ao carregar a página
             window.onload = loadDespacho;
+            
         </script>
 
     </body>
