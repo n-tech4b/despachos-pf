@@ -272,18 +272,6 @@
                     .catch(error => console.error('Erro ao carregar o despacho:', error));
             });
 
-            // // Função para carregar o despacho do arquivo JSON
-            // function loadDespacho() {
-            //     fetch('despacho.json')
-            //         .then(response => response.json())
-            //         .then(data => {
-            //             document.getElementById('despacho').value = data.despacho;
-            //         })
-            //         .catch(error => console.error('Erro ao carregar o despacho:', error));
-            // }
-
-            // // Carregar o despacho ao carregar a página
-            // window.onload = loadDespacho;
 
             var objeto = despacho.value;
             console.log(objeto).value;
@@ -309,6 +297,24 @@
 
         </script>
 
+        <script>
+
+        document.getElementById('copyButton').addEventListener('click', function() {
+            var content = despacho.value; // Obtém o conteúdo do editor Jodit
+            
+            // Cria um elemento textarea temporário para copiar o conteúdo
+            var tempTextArea = document.createElement('textarea');
+            tempTextArea.value = content;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            // Opcional: Mostrar uma mensagem de confirmação
+            alert('Conteúdo copiado para a área de transferência!');
+        });
+
+        </script>
         
 
 
