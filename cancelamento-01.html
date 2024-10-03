@@ -166,15 +166,16 @@
             }
            
 
+            .cancelamento-01 a#cancelamento-01
 
-             
+             /*
             .interrupcao-08 a#interrupcao-08,
             .interrupcao-09 a#interrupcao-09,
             .interrupcao-10 a#interrupcao-10,
             .interrupcao-11 a#interrupcao-11,
             .interrupcao-12 a#interrupcao-12,
             .interrupcao-13 a#interrupcao-13,
-            .interrupcao-14 a#interrupcao-14
+            .interrupcao-14 a#interrupcao-14,
 
 
 
@@ -233,6 +234,7 @@
             background: #00464d;
             cursor: text;
             }
+
             a {
                 text-decoration: none;
                 color: white;
@@ -270,7 +272,7 @@
                         <span>|</span>
                         <a href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções</a>
                         <span>|</span>
-                         <a href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General/Manual%20-%20Supervis%C3%A3o%20de%20Pessoa%20F%C3%ADsica?csf=1&web=1&e=3BsCAt" target="_blank">Manuais</a>
+                        <a href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General/Manual%20-%20Supervis%C3%A3o%20de%20Pessoa%20F%C3%ADsica?csf=1&web=1&e=3BsCAt" target="_blank">Manuais</a>
                         <span>|</span>
                         <a href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General?csf=1&web=1&e=Tw83pb" target="_blank">Drive</a>
                         <span>|</span>
@@ -308,7 +310,7 @@
         
 
         <div id="menu-esquerda">
-            <div class="interrupcao-01">
+            <div class="cancelamento-01">
 
                 <div class="container">
                     <div class="lateral">
@@ -358,11 +360,11 @@
                              <fieldset>
  
                                  <legend style="color: #44546a;">
-                                 
+                                    
                                      Cancelamento
  
                                  </legend>
-                                     
+                                        
                                  
                                  <li>
                                      <a id="cancelamento-01" href="cancelamento-01.html">Cancelamento Aprovado (E-MAIL)</a>
@@ -385,23 +387,16 @@
         <div class="despacho">
 
             <div>
-            <textarea name="" id="" cols="100" rows="15">
-R03 D XX
-<br><br>
+            <textarea name="" id="" cols="100" rows="15" style="font-family: arial; font: 11px">
+Prezado(a) sr(a). XXXXXXXXXX
 
-Olá! Sua solicitação de Reativação de Registro não será atendida no momento. <br><br>
-Informamos que, de acordo com o Artigo 9º da Resolução nº 167 do CAU/BR, para que o registro profissional seja reativado, é necessário que não tenha débitos pendentes com o CAU. <br><br>
-
-Verificamos em sua página que o valor referente (ao proporcional do exercício de xxxxxx/à multa de eleição do ano xxxx/à multa de fiscalização/à multa de processo ético) encontra-se em aberto. <br>
-Por gentileza, realize a negociação dos débitos e, posteriormente, cadastre um novo protocolo para que possamos dar andamento à sua solicitação de reativação de registro. <br><br>
-
-Este protocolo será arquivado. <br><br>
-
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
-
-
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+Agradecemos o contato. 
+Gostaríamos de expressar nossos sentimentos pelo falecimento do(a) profissional XXXXXXXXXXXX.
+Conforme solicitado, foi realizado o cancelamento do registro do profissional, encerrando todas as pendências de registro. 
+Caso queira verificar possíveis pendências financeiras, por favor, entre em contato através do nosso Canal de Atendimento (link: https://www.causp.gov.br/atendimento) informando o número do protocolo XXXXXXXXX/XXXX, solicitando informações referentes a estas pendências.
+    
+Atenciosamente,
+Coordenação do Exercício Profissional – CAU/SP
             </textarea>
             </div>
             
@@ -410,12 +405,14 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                 <button id="atualizar">Atualizar</button>
             </div>
 
+            
+
            
 
         </div>
 
         <div id="menu-direita">
-            <div class="interrupcao-10">
+            <div class="interrupcao-01">
 
                 <div class="container">
                     <div class="lateral">
@@ -503,6 +500,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                 location.reload(); // Esta linha recarrega a página
             });
         });
+
 
         function RedirecionarRRTs() {
             window.open('index.html', '_self');
