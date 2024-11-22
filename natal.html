@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Clima de Natal 🎄</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: white;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f5d742;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -50px;
+            color: white;
+            font-size: 1.2em;
+            user-select: none;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container img {
+            width: 200px;
+            margin: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .music {
+            margin-top: 30px;
+        }
+
+        .music audio {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        🎅 Bem-vindo ao Clima de Natal 🎅
+    </header>
+
+    <!-- Neve -->
+    <script>
+        const createSnowflake = () => {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+            snowflake.innerHTML = '❄️';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        };
+
+        setInterval(createSnowflake, 100);
+    </script>
+
+    <!-- Conteúdo -->
+    <div class="container">
+        <p>Que seu Natal seja repleto de alegria, amor e paz! 🎄</p>
+        <img src="https://img.icons8.com/color/256/christmas-tree.png" alt="Árvore de Natal">
+        <img src="https://img.icons8.com/color/256/santa-claus.png" alt="Papai Noel">
+        <img src="https://img.icons8.com/color/256/candy-cane.png" alt="Doce de Natal">
+
+        <div class="music">
+            <p>🎵 Música Natalina:</p>
+            <audio controls autoplay loop>
+                <source src="https://www.bensound.com/bensound-music/bensound-jinglebells.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </div>
+
+    <footer>
+        ⛄ Feliz Natal e um Próspero Ano Novo! ⛄
+    </footer>
+</body>
+
+</html>
